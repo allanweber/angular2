@@ -1,1 +1,5 @@
 <app-data-binding></app-data-binding>
+
+<lifecycle [valorInicial]="valorInicial" *ngIf="deletarConteudo != true" ></lifecycle>
+<button (click)="valorInicial = 20">Mudar Valor</button>
+<button (click)="deletarConteudo = true">Deletar Tag Life Cycle</button>

@@ -86,11 +86,14 @@
   </article>
 </section>
 
-<section class="two-way-databinding">
+<section>
   <article>
     <h3>Input Output Property</h3>
     <div>
         <curso [nome]="nomeCurso"></curso>
+        <contador [valor]="valorInicial"
+        (mudouValor)="onValorMudou($event)"
+        ></contador>
     </div>
   </article>
 </section>

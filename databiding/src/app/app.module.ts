@@ -6,12 +6,17 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { InputPropertyComponent } from './data-binding/input-property.component';
+import { OutPutPropertyComponent } from './data-binding/ouput-property.component';
+import { LifeCycleComponent } from './ciclo/life-cycle.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
-    [InputPropertyComponent]
+    InputPropertyComponent,
+    OutPutPropertyComponent,
+    LifeCycleComponent
   ],
   imports: [
     BrowserModule,

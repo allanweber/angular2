@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { LifeCycleComponent } from './ciclo/life-cycle.component';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +8,7 @@ import { LifeCycleComponent } from './ciclo/life-cycle.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  deletarConteudo:boolean = false;
+  title = 'app works!';
 
-  valorInicial:number = 15;
-
+  list = _.map([1,2,3], (n) => `# ${n}`);
 }
