@@ -1,0 +1,12 @@
+<h5>* NG IF</h5>
+<div *ngIf="mostrarCursos">Lista de cursos aqui</div>
+<div *ngIf="!mostrarCursos" >Não existem cursos</div>
+<button type="button" (click)="onClick()">Mostras / Esconder</button>
+
+<!--<template [ngIf]="mostrarCursos">
+    <div>Lista de cursos aqui</div>
+</template>
+
+<div template="ngIf mostrarCursos">
+    Lista de cursos aqui
+</div>-->
