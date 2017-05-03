@@ -9,8 +9,12 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 //import { routing } from './app.routing';
 import { AppRoutingModule } from './app.routing.module';
-import { CursosModule } from './cursos/cursos.module';
-import { AlunosModule } from './alunos/alunos.module';
+//import { CursosModule } from './cursos/cursos.module'; agora é usado pelo lazy Load
+//import { AlunosModule } from './alunos/alunos.module'; agora é usado pelo lazy Load
+import { AuthService } from './login/auth.service';
+import { AuthGuard } from './guards/auth.guard.';
+import { CursosGuard } from './guards/cursos.guard';
+import { AlunosGuard } from './guards/alunos.guard';
 
 @NgModule({
   declarations: [
@@ -23,11 +27,11 @@ import { AlunosModule } from './alunos/alunos.module';
     FormsModule,
     HttpModule,
     MaterializeModule,
-    CursosModule,
-    AlunosModule,
+    //CursosModule, agora é usado pelo lazy Load
+    //AlunosModule, agora é usado pelo lazy Load
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ AuthService, AuthGuard, CursosGuard, AlunosGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
